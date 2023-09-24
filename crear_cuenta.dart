@@ -1,254 +1,259 @@
 import 'package:flutter/material.dart';
 
-Widget crear_cuenta() {
-  return MaterialApp(
-    title: 'Crea una nueva cuenta',
-    theme: ThemeData(
-      primarySwatch: MaterialColor(
-        0xFFFFFFFF,
-        <int, Color>{
-          50: Colors.white,
-          100: Colors.white,
-          200: Colors.white,
-          300: Colors.white,
-          400: Colors.white,
-          500: Colors.white,
-          600: Colors.white,
-          700: Colors.white,
-          800: Colors.white,
-          900: Colors.white,
-        },
-      ),
-      scaffoldBackgroundColor: Colors.white,
-      visualDensity: VisualDensity.adaptivePlatformDensity,
-    ),
-    debugShowCheckedModeBanner: false,
-    home: MyHomePage(),
-  );
-}
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class crear_cuenta extends StatelessWidget {
+  get color => null;
 
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  String username = '';
-  String email = '';
-  String password = '';
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-  }
-
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(height: 100.0),
-              Container(
-                color: Colors.white,
-                child: Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    'Crea una nueva cuenta',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30,
-                      color: Colors.black,
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                child: Container(
-                  margin: const EdgeInsets.only(top:60.0),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Nombre completo',
-                      hintStyle: TextStyle(
-                        color: Colors.black,
-                      ),
-                      fillColor: const Color(0xFFE3F4DF),
-                      filled: true,
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(45.0)),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.black,
-                        ),
-                      ),
-                    ),
-                    onChanged: (value) {
-                      setState(() {
-                        username = value;
-                      });
-                    },
-                  ),
-                ),
-              ),
-              Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    child: Container( 
-                      margin: const EdgeInsets.only(top: 20.0),
-
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: 'Nombre de usuario',
-                          hintStyle: TextStyle(
-                            color: Colors.black,
-                          ),
-                          fillColor: const Color(0xFFE3F4DF),
-                          filled: true,
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(45.0)),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Colors.black,
-                            ),
-                          ),
-                        ),
-                        onChanged: (value) {
-                          setState(() {
-                            username = value;
-                          });
-                        },
-                      ),
-                    ),
-                  ),
-
-
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    child: Container(
-                      margin: const EdgeInsets.only(top: 20.0),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: 'Correo electrónico',
-                          hintStyle: TextStyle(
-                            color: Colors.black,
-                          ),
-                          fillColor: const Color(0xFFE3F4DF),
-                          filled: true,
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(45.0)),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Colors.black,
-                            ),
-                          ),
-                        ),
-                        onChanged: (value) {
-                          setState(() {
-                          username = value;
-                          });
-                        },
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    child: Container(
-                      margin: const EdgeInsets.only(top: 20.0),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: 'Contraseña',
-                          hintStyle: TextStyle(
-                            color: Colors.black,
-                          ),
-                          fillColor: const Color(0xFFE3F4DF),
-                          filled: true,
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(45.0)),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Colors.black,
-                            ),
-                          ),
-                        ),
-                        onChanged: (value) {
-                          setState(() {
-                            username = value;
-                          });
-                        },
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 30.0),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      ElevatedButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all<Color>(const Color(0xFFE3F4DF)),
-                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(45.0)),
-                            ),
-                          ),
-                          padding: MaterialStateProperty.all<EdgeInsetsGeometry>(EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0)),
-                        ),
-                        child: Text(
-                          'Cuenta Personal',
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ),
-                      SizedBox(width: MediaQuery.of(context).size.width * 0.03),
-                      ElevatedButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all<Color>(const Color(0xFFE3F4DF)),
-                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(45.0)),
-                            ),
-                          ),
-                          padding: MaterialStateProperty.all<EdgeInsetsGeometry>(EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0)),
-                        ),
-                        child: Text(
-                          'Cuenta Comercial',
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 30.0),
-                  Center(
-                    
-                    child: Container(
-                      color: Colors.black, // Cambia el color de la línea
-                      height: 1.0, // Cambia la altura de la línea
-                      width: MediaQuery.of(context).size.width * 0.9, // Cambia el ancho de la línea
-                    ),
-                  ),
-            ],
-          ),
+      appBar:  AppBar(
+         backgroundColor: Color.fromARGB(255, 255, 255, 255),
+        title: Text('Crear cuenta', style: TextStyle(color: Colors.black),),
         ),
+      body: Column(
+        
+        children: [
+
+          SizedBox(height: 51,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children:[
+            
+          Container(
+          height: 50,
+          width:350,
+          decoration: BoxDecoration(
+            color: const Color.fromARGB(255, 215, 209, 209),
+            borderRadius: BorderRadius.all(Radius.circular(45)),
+          ),
+          child: TextField(
+            decoration: InputDecoration(
+              
+              hintText: "Nombre(s)",
+              contentPadding: EdgeInsets.symmetric(
+                  vertical: 15.0, // Espaciado vertical para centrar
+                  horizontal: 15.0, // Espaciado horizontal para centrar
+              
+            ),
+            
+            
+          ),
+          
+        )
+      )]),
+        SizedBox(height: 51,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children:[
+            
+          Container(
+          height: 50,
+          width:350,
+          decoration: BoxDecoration(
+            color: const Color.fromARGB(255, 215, 209, 209),
+            borderRadius: BorderRadius.all(Radius.circular(45)),
+          ),
+          child: TextField(
+            decoration: InputDecoration(
+              
+              hintText: "Apellidos",
+              contentPadding: EdgeInsets.symmetric(
+                  vertical: 15.0, // Espaciado vertical para centrar
+                  horizontal: 15.0, // Espaciado horizontal para centrar
+              
+            ),
+            
+            
+          ),
+          
+        )
+      )]),
+        SizedBox(height: 51,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children:[
+            
+          Container(
+          height: 50,
+          width:350,
+          decoration: BoxDecoration(
+            color: const Color.fromARGB(255, 215, 209, 209),
+            borderRadius: BorderRadius.all(Radius.circular(45)),
+          ),
+          child: TextField(
+            decoration: InputDecoration(
+              
+              hintText: "Correo Electronico",
+              contentPadding: EdgeInsets.symmetric(
+                  vertical: 15.0, // Espaciado vertical para centrar
+                  horizontal: 15.0, // Espaciado horizontal para centrar
+              
+            ),
+            
+            
+          ),
+          
+        )
+      )]),
+
+       SizedBox(height: 35,),
+       
+       Text(
+          'Fecha de nacimiento',
+          style: TextStyle(
+              fontSize: 18.0,           // Tamaño de fuente
+              color: Colors.black,       // Color del texto
+              
+        )),
+
+        SizedBox(
+        height: 10,),
+        
+        Row(
+          children: [
+             SizedBox(
+        width: 40,
       ),
-    );
+            Container(
+          height: 50,
+          width: 100,
+          decoration: BoxDecoration(
+            color: const Color.fromARGB(255, 215, 209, 209),
+            borderRadius: BorderRadius.all(Radius.circular(45)),
+          ),
+          child: TextField(
+            decoration: InputDecoration(
+              
+              hintText: "DD",
+              contentPadding: EdgeInsets.symmetric(
+                  vertical: 15.0, // Espaciado vertical para centrar
+                  horizontal: 15.0, // Espaciado horizontal para centrar
+              
+            ),
+            
+            
+          ),
+          
+        )
+      ),
+      SizedBox(
+        width: 20,
+      ),
+      Container(
+          height: 50,
+          width:100,
+          decoration: BoxDecoration(
+            color: const Color.fromARGB(255, 215, 209, 209),
+            borderRadius: BorderRadius.all(Radius.circular(45)),
+          ),
+          child: TextField(
+            decoration: InputDecoration(
+              
+              hintText: "MM",
+              contentPadding: EdgeInsets.symmetric(
+                  vertical: 15.0, // Espaciado vertical para centrar
+                  horizontal: 15.0, // Espaciado horizontal para centrar
+              
+            ),
+            
+            
+          ),
+          
+        )
+      ),
+      SizedBox(
+        width: 25,
+      ),
+      Container(
+          height: 50,
+          width:100,
+          decoration: BoxDecoration(
+            color: const Color.fromARGB(255, 215, 209, 209),
+            borderRadius: BorderRadius.all(Radius.circular(45)),
+          ),
+          child: TextField(
+            decoration: InputDecoration(
+              
+              hintText: "YYYY",
+              contentPadding: EdgeInsets.symmetric(
+                  vertical: 15.0, // Espaciado vertical para centrar
+                  horizontal: 15.0, // Espaciado horizontal para centrar
+              
+            ),
+            
+            
+          ),
+          
+        )
+      )
+          ],
+        ),
+         SizedBox(height: 51,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children:[
+            
+          Container(
+          height: 50,
+          width:350,
+          decoration: BoxDecoration(
+            color: const Color.fromARGB(255, 215, 209, 209),
+            borderRadius: BorderRadius.all(Radius.circular(45)),
+          ),
+          child: TextField(
+            decoration: InputDecoration(
+              
+              hintText: "Contraseña",
+              contentPadding: EdgeInsets.symmetric(
+                  vertical: 15.0, // Espaciado vertical para centrar
+                  horizontal: 15.0, // Espaciado horizontal para centrar
+              
+            ),
+            
+            
+          ),
+          
+        )
+      )]),
+       SizedBox(height: 51,),
+          Row(
+            children:[
+            SizedBox(width: 218,),
+          Container(
+          height: 50,
+          width:200,
+          decoration: BoxDecoration(
+            color: const Color(0xFFC90000),
+            borderRadius: BorderRadius.all(Radius.circular(45)),
+            ),
+            
+         
+          child: TextButton(
+            onPressed: creacionCuenta,
+            child: Text(
+              'Crear cuenta',
+              style: TextStyle(color:Colors.white)),
+            ),
+            
+            )
+            
+          
+          
+        ]), 
+
+         
+]//todo va adentro de este.
+
+       
+
+    ));
   }
 }
+
+void creacionCuenta(){
+
+}
+
+
