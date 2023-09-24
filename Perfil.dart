@@ -19,7 +19,7 @@ class _PerfilState extends State<Perfil> {
           padding: const EdgeInsets.only(top: 50, left: 50, right: 50),
           child: Container(
             child: Image.asset(
-              'assets/Logo_Banorte.png', // Ruta de la imagen en assets
+              'assets/Logo_de_Banorte.png', // Ruta de la imagen en assets
               width: 150,
               height: 400, // Ajusta la imagen para que cubra el ancho de la pantalla
             ),
@@ -33,7 +33,7 @@ class _PerfilState extends State<Perfil> {
             top: 50,
             left: 100,
             child: Image.asset(
-                'assets/usuario.png', // Ruta de la imagen en assets
+                'assets/iconoUsuario.png', // Ruta de la imagen en assets
                 width: 200,
                 // Ajusta la imagen para que cubra el ancho de la pantalla
               ),

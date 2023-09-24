@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hackmty/Home.dart';
-import 'package:hackmty/crear_cuenta.dart';
+import 'package:hack_mty/Home.dart';
+import 'package:hack_mty/crear_cuenta.dart';
+
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -31,7 +32,7 @@ class LoginPage extends StatelessWidget {
               top: 150  ,
               left: 0,
               child: Image.asset(
-                'assets/Logo_Banorte.png', // Ruta de la imagen en assets
+                'assets/Logo_de_Banorte.png', // Ruta de la imagen en assets
                 width: MediaQuery.of(context).size.width,
                 fit: BoxFit.cover, // Ajusta la imagen para que cubra el ancho de la pantalla
               ),

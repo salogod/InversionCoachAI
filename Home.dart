@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hack_mty/Perfil.dart';
+import 'package:hack_mty/chat.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -13,7 +15,7 @@ class Home extends StatelessWidget {
           padding: const EdgeInsets.only(top: 50, left: 50, right: 50),
           child: Container(
             child: Image.asset(
-              'assets/Logo_Banorte.png', // Ruta de la imagen en assets
+              'assets/Logo_de_Banorte.png', // Ruta de la imagen en assets
               width: 150,
               height: 400, // Ajusta la imagen para que cubra el ancho de la pantalla
             ),
@@ -42,10 +44,13 @@ class Home extends StatelessWidget {
             left: 320,
             right: 20,
             child: InkWell(
-              onTap: Perfil,
+              onTap:() => Navigator.push(
+         context,
+      MaterialPageRoute(builder: (context) => Perfil()),
+            ),
             
               child: Image.asset(
-                'assets/usuario.png', // Ruta de la imagen en assets
+                'assets/iconoUsuario.png', // Ruta de la imagen en assets
                 width: MediaQuery.of(context).size.width,
                 // Ajusta la imagen para que cubra el ancho de la pantalla
               ),
@@ -102,7 +107,11 @@ class Home extends StatelessWidget {
             borderRadius: BorderRadius.circular(30.0),
           ),
         ),
-        onPressed: Chat_general,
+        onPressed:() => Navigator.push(
+         context,
+      MaterialPageRoute(builder: (context) => Chat()),
+            ),
+
         child: const Text(
           'Chat general',
           style: TextStyle(
@@ -138,11 +147,9 @@ class Home extends StatelessWidget {
     
 
   }
-  void Perfil() {
-    // Your login logic goes here
-  }
+  
   void Chat_general() {
-    // Your login logic goes here
+    
   }
 
     void Graficas() {

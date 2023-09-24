@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:hackmty/LoginPage.dart';
-import 'package:hackmty/Home.dart';
-import 'package:hackmty/chat.dart';
-import 'package:hackmty/Perfil.dart';
-
-
+import 'package:hack_mty/Home.dart';
+import 'package:hack_mty/LoginPage.dart';
+import 'package:hack_mty/Perfil.dart';
+import 'package:hack_mty/chat.dart';
+import 'package:hack_mty/crear_cuenta.dart';
+import 'package:hack_mty/pruebas.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Center(
-          child: LoginPage(), 
+          child: LoginPage(), // Usa LoginForm aquí
         ),
       ),
     );

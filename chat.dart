@@ -18,7 +18,7 @@ class _ChatState extends State<Chat> {
           padding: const EdgeInsets.only(top: 50, left: 50, right: 50),
           child: Container(
             child: Image.asset(
-              'assets/Logo_Banorte.png', // Ruta de la imagen en assets
+              'assets/Logo_de_Banorte.png', // Ruta de la imagen en assets
               width: 150,
               height: 400, // Ajusta la imagen para que cubra el ancho de la pantalla
             ),
@@ -42,20 +42,7 @@ class _ChatState extends State<Chat> {
             ),
           ),
           // Imagen 
-          Positioned(
-            top: 20,
-            left: 0,
-            right: 350,
-            child: InkWell(
-              onTap: Regresar,
-              
-              child: Image.asset(
-                'assets/back.png', // Ruta de la imagen en assets
-                  width: MediaQuery.of(context).size.width,
-                  // Ajusta la imagen para que cubra el ancho de la pantalla
-                ),
-              ),
-            ),
+          
 
             Positioned(
               top: 30, // Ajusta la posición del texto sobre el círculo

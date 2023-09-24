@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hackmty/Home.dart';
+import 'package:hack_mty/Home.dart';
 
 
 class crear_cuenta extends StatelessWidget {
@@ -224,7 +224,7 @@ class crear_cuenta extends StatelessWidget {
             SizedBox(width: 218,),
           Container(
           height: 50,
-          width:200,
+          width:150,
           decoration: BoxDecoration(
             color: const Color(0xFFC90000),
             borderRadius: BorderRadius.all(Radius.circular(45)),
